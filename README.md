@@ -37,13 +37,16 @@ Step 3:- Register Delegate Methods in to your ViewController:-
 Step 4:- Finally Initialize your Animator in "viewDidLoad()" method of "ViewController":-\
   
   //1. initialize animator
+  
         Animator.shared.setAnimator(UIImage.init(named: "bg.jpeg"), self.view)
+  
         Animator.shared.delegateTable = self;
+        
         Animator.shared.delegateCard = self;
         
  
  //2.  Or you can  initialize animator with CARDS( you can configure your cards like this also)
-        // Animator.shared.setAnimator(UIImage.init(named: "bg.jpeg"), self.view,AnimationConfig(cards: [Card.init(bgImage: "0.png", strTitle: "SCIENCE", items: [ Model() ] ) ]) );
+       Animator.shared.setAnimator(UIImage.init(named: "bg.jpeg"), self.view,AnimationConfig(cards: [Card.init(bgImage: "0.png", strTitle: "SCIENCE", items: [ Model() ] ) ]) );
         
 
 Step 5:- 6 Cards are Limit of this NewsStand.
