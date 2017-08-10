@@ -74,9 +74,10 @@ struct AnimationConfig{
                            
                            Card.init(bgImage: "1.png", strTitle: "SPORTS", items: [Model(),Model(),Model(),Model(),Model(),Model()]),
                            
-                           Card.init(bgImage: "2.png", strTitle: "MUSIC", items: [Model(),Model(),Model(),Model()]),
+                           Card.init(bgImage: "2.png", strTitle: "FRIENDS", items: [Model(),Model(),Model(),Model()]),
                            
-                           Card.init(bgImage: "3.png", strTitle: "STYLE", items: [Model(),Model()] )
+                           Card.init(bgImage: "3.png", strTitle: "STYLISH", items: [Model(),Model()] )
+
                             ])
     {
         

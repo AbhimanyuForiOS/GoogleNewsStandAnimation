@@ -18,7 +18,7 @@ class HeaderBottom:UIView{
         
         self.init()
         
-        self.backgroundColor =  .red//UIColor.init(red: 255.0/255.0, green: 0.0, blue: 0.0, alpha: 0.15);
+        self.backgroundColor =  .white//UIColor.init(red: 255.0/255.0, green: 0.0, blue: 0.0, alpha: 0.15);
         
         self.translatesAutoresizingMaskIntoConstraints = false
         

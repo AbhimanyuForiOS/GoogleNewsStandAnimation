@@ -101,10 +101,7 @@ class ViewController: UIViewController,AnimatorCardDelegate,AnimatorTableDelegat
         self.view.bringSubview(toFront: btnMenu)
         self.view.bringSubview(toFront: btnSearch)
         
-    
     }
-
-
 
     //MARK:-  status  bar related
     func statusBarColor(isWhite:Bool = false){

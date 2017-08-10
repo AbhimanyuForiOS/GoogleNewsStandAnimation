@@ -58,7 +58,7 @@ class TableView:UITableView,UITableViewDelegate,UITableViewDataSource,UIScrollVi
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell                            = tableView.dequeueReusableCell(withIdentifier: "CellTable", for: indexPath) as! CellTable
-        cell.backgroundColor = .white
+        cell.backgroundColor = .lightGray
         
         return cell
     }
@@ -71,7 +71,7 @@ class TableView:UITableView,UITableViewDelegate,UITableViewDataSource,UIScrollVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return SCREEN_HEIGHT*0.09
+        return SCREEN_WIDTH*0.10+SCREEN_WIDTH*0.40
     }
     
     

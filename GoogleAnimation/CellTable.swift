@@ -38,7 +38,9 @@ class CellTable: UITableViewCell {
         
         imgView                                             =  UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints   = false
-        imgView.backgroundColor                             = .clear
+        imgView.backgroundColor                             = .orange
+        imgView.clipsToBounds                               = true
+        imgView.layer.cornerRadius                          = SCREEN_WIDTH*0.03
         viewMain.addSubview(imgView)
         
         lblTitle                                            = UILabel()
@@ -65,13 +67,30 @@ class CellTable: UITableViewCell {
         
         
         
-        C.set(item: lblTitle, attri: .leading, relatedBy: .equal, toItem: viewMain, attribute: .leading, multiplier: 1.0, constant: SCREEN_WIDTH*0.10, viewMain: self.contentView)
-        C.set(item: lblTitle, attri: .trailing, relatedBy: .equal, toItem: viewMain, attribute: .trailing, multiplier: 1.0, constant: -SCREEN_WIDTH*0.10, viewMain: self.contentView)
+        //set up image 
+        C.set(item: imgView, attri: .leading, relatedBy: .equal, toItem: viewMain, attribute: .leading, multiplier: 1.0, constant: SCREEN_WIDTH*0.10, viewMain: self.contentView)
+        C.set(item: imgView, attri: .trailing, relatedBy: .equal, toItem: viewMain, attribute: .trailing, multiplier: 1.0, constant: -SCREEN_WIDTH*0.10, viewMain: self.contentView)
+        C.set(item: imgView, attri: .bottom, relatedBy: .equal, toItem: viewMain, attribute: .bottom, multiplier: 1.0, constant: -SCREEN_WIDTH*0.10, viewMain: self.contentView)
+        C.set(item: imgView, attri: .top, relatedBy: .equal, toItem: viewMain, attribute: .top, multiplier: 1.0, constant:  SCREEN_WIDTH*0.10, viewMain: self.contentView)
+        
+        imgView.layoutIfNeeded()
+        
+        
+        
+        
+        C.set(item: lblTitle, attri: .leading, relatedBy: .equal, toItem: imgView, attribute: .leading, multiplier: 1.0, constant: 0, viewMain: self.contentView)
+        C.set(item: lblTitle, attri: .trailing, relatedBy: .equal, toItem: imgView, attribute: .trailing, multiplier: 1.0, constant: 0, viewMain: self.contentView)
         C.set(item: lblTitle, attri: .bottom, relatedBy: .equal, toItem: viewMain, attribute: .bottom, multiplier: 1.0, constant: 0, viewMain: self.contentView)
-        C.set(item: lblTitle, attri: .top, relatedBy: .equal, toItem: viewMain, attribute: .top, multiplier: 1.0, constant: 0, viewMain: self.contentView)
+        C.set(item: lblTitle, attri: .top, relatedBy: .equal, toItem: imgView, attribute: .bottom, multiplier: 1.0, constant: 0, viewMain: self.contentView)
         
         lblTitle.text = "Testing animation of row";
     
+        lblTitle.layoutIfNeeded()
+        
+        
+        
+        
+        
         
         C.set(item: line, attri: .leading, relatedBy: .equal, toItem: viewMain, attribute: .leading, multiplier: 1.0, constant: 0.0, viewMain: self.contentView)
         C.set(item: line, attri: .trailing, relatedBy: .equal, toItem: viewMain, attribute: .trailing, multiplier: 1.0, constant: 0.0, viewMain: self.contentView)
