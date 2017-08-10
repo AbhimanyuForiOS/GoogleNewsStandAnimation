@@ -212,7 +212,7 @@ class SwipeGesture:UISwipeGestureRecognizer{
                                       
                                         card.title.centerX?.constant            = -card.bounds.size.width*0.40;
                                         card.title.layoutIfNeeded()
-                                        card.title.transform = CGAffineTransform(scaleX: 2.1, y: 2.1) //Scale label area
+                                        card.title.transform = CGAffineTransform(scaleX: 2.3, y: 2.3) //Scale label area
                                       
                                         
                                         

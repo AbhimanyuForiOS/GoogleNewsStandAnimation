@@ -31,7 +31,7 @@ class TableHolder:UIScrollView,UIScrollViewDelegate{
         
         C.set(item: self, attri: .trailing, relatedBy: .equal, toItem:   v, attribute: .trailing, multiplier: 1.0, constant: 0, viewMain: v);
         
-        C.set(item: self, attri: .top, relatedBy: .equal, toItem:v , attribute: .top, multiplier: 1.0, constant:v!.header.bounds.size.height+SCREEN_WIDTH*0.01, viewMain:v);
+        C.set(item: self, attri: .top, relatedBy: .equal, toItem:v , attribute: .top, multiplier: 1.0, constant:v!.header.bounds.size.height+SCREEN_WIDTH*0.03, viewMain:v);
         
         self.layoutIfNeeded()
         
