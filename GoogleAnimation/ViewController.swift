@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,AnimatorTableDelegate {
+class ViewController: UIViewController,AnimatorCardDelegate,AnimatorTableDelegate {
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,7 +132,7 @@ class ViewController: UIViewController,AnimatorTableDelegate {
         
         
         
-    }    
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
