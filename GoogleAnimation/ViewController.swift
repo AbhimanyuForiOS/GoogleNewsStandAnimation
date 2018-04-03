@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,AnimatorCardDelegate,AnimatorTableDelegate {
+class ViewController: UIViewController,AnimatorTableDelegate {
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,17 +132,7 @@ class ViewController: UIViewController,AnimatorCardDelegate,AnimatorTableDelegat
         
         
         
-    }
-
-    func cardClickedFromTopHeader(card: Card) {
-        print(card.description);
-        let vcDetail = DetailVc()
-        vcDetail.titleString = card.strTitle;
-         self.navigationController?.pushViewController(vcDetail, animated: true);
-    }
-    
-    
-    
+    }    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

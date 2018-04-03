@@ -57,6 +57,7 @@ class CardHolder:UIScrollView,UIScrollViewDelegate{
                 //get each card and set up in scroller
                 let c = Animator.shared.config.cards![i]
                 c.translatesAutoresizingMaskIntoConstraints = false;
+                c.tag = i
                 self.addSubview(c);
                 
                 var h:CGFloat = 0.0
@@ -85,7 +86,7 @@ class CardHolder:UIScrollView,UIScrollViewDelegate{
                 
                 //set line there
                 
-                c.line.centerY       = C.get(item: c.line, attri: .bottom, relatedBy: .equal, toItem: c, attribute: .bottom, multiplier: 0.7, constant: 0, viewMain: v);
+                c.line.centerY       = C.get(item: c.line, attri: .bottom, relatedBy: .equal, toItem: c, attribute: .bottom, multiplier: 0.7, constant: is_iPhoneX ? 12 : 0, viewMain: v);
                 
                 c.line.height    = C.get(item: c.line, attri: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: Animator.shared.config.line_height!, viewMain: v);
                 

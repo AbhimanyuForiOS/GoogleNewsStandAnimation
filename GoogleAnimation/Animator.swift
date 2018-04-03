@@ -14,6 +14,29 @@ protocol AnimatorCardDelegate{
     func  cardClickedFromTopHeader(card:Card)
 
 }
+
+extension AnimatorCardDelegate {
+    func cardClickedFromTopHeader(card:Card) {
+        /// This code block will animate selected card to mid way while full_stage
+        if Animator.shared.config.headerStage == Stage.full_stage {
+            let selectedGestureRecongnser = SwipeGesture()
+            /// Set selected index
+            Animator.shared.config.selectedIndex = card.tag
+            /// Set bottom view content offset
+            let x =  CGFloat(Animator.shared.config.selectedIndex!)*Animator.shared.topView!.bounds.size.width
+            Animator.shared.bottomView.tblHolder.setContentOffset(CGPoint.init(x:x,y: 0), animated: false);
+            /// Set Selected card position
+            selectedGestureRecongnser.setSelectedCardIndex()
+            
+            /// Swipe up manually
+            selectedGestureRecongnser.direction = .up
+            selectedGestureRecongnser.handleSwipe(gesture: selectedGestureRecongnser)
+            
+        }
+
+    }
+}
+
 protocol AnimatorTableDelegate {
     func  didSelect(item:Model,inCard card:Card)
 }

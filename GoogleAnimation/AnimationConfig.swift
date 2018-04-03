@@ -11,7 +11,7 @@ import UIKit
 let SCREEN_WIDTH:CGFloat = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT:CGFloat = UIScreen.main.bounds.size.height
 
-
+let is_iPhoneX: Bool = UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height == 2436
 
 enum Stage:Int {
    case header_stage = 0,
@@ -33,7 +33,7 @@ struct AnimationConfig{
    
     
     
-    var top_Header_h:CGFloat?   = SCREEN_WIDTH*0.17
+    var top_Header_h:CGFloat?   =  is_iPhoneX ? SCREEN_WIDTH*0.235 : SCREEN_WIDTH*0.17
     
     
     var mid_Header_h:CGFloat?   = SCREEN_HEIGHT*0.40

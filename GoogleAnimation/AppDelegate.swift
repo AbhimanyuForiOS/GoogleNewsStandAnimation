@@ -8,7 +8,7 @@
 
 import UIKit
 
-let gap:CGFloat   = SCREEN_WIDTH*0.02
+let gap:CGFloat   = is_iPhoneX ? SCREEN_WIDTH*0.05 : SCREEN_WIDTH*0.02
 
 
 @UIApplicationMain
